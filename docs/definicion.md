@@ -282,7 +282,7 @@ Actor: conductor. Precondición: el vehículo tiene kilometraje registrado. Fluj
 
 ## 14. Arquitectura técnica y navegación implementada
 
-**Entorno.** Flutter VERSION_FLUTTER, Dart VERSION_DART.
+**Entorno.** Flutter 3.44.9, Dart 3.12.2.
 
 **Paquetes previstos.** Ninguno adicional en esta versión: solo el SDK de Flutter. Para guardar los datos en el teléfono en una versión futura se prevé `sqflite`, cuando se vea en clase.
 
@@ -328,7 +328,7 @@ onTap: () {
 },
 ```
 
-**Datos fijos de ejemplo.** Dos cuentas (una de conductor y una de mecánico) y una moto Suzuki Gixxer 250 con placa de ejemplo, en Medellín, con el plan de revisiones del manual: 1.000, 3.000, 6.000, 9.000 y 12.000 km, o 1, 3, 6, 9 y 12 meses, lo que ocurra primero. Con eso se muestra la regla RN-01 en la sustentación.
+**Datos fijos de ejemplo.** Dos cuentas (una de conductor y una de mecánico) y dos vehículos en Medellín: una moto Suzuki Gixxer 250 (placa ABC12D) con cinco ítems tomados del plan de revisiones del manual (cambio de aceite cada 3.000 km o 3 meses; filtro de aire y bujía cada 6.000 km o 6 meses; kit de arrastre y llantas cada 12.000 km o 12 meses), y un carro Renault Logan (placa KLM456) con cambio de aceite cada 5.000 km o 6 meses y llantas cada 40.000 km o 48 meses. Con eso se muestra la regla RN-01 en la sustentación. En este entregable los objetos no llevan id: cada vehículo guarda sus ítems y sus documentos adentro, y MantenimientoRealizado todavía no existe en el código porque no hay lógica de registro. Los id, las claves foráneas y esa entidad de la sección 10 aparecen cuando los datos pasen a la base local. Las claves de las cuentas de prueba están en el código solo para la demo; RNF-06 aplica cuando exista guardado real de usuarios.
 
 ## Historial de cambios
 
