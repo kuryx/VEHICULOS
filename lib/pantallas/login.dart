@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'mis_vehiculos.dart';
+import 'taller.dart';
 import '../modelos/vehiculo.dart';
 
 class PantallaLogin extends StatefulWidget {
@@ -38,14 +39,20 @@ class _PantallaLoginState extends State<PantallaLogin> {
       return;
     }
 
-    // La navegación a Mis vehículos o Taller según el rol se agrega mañana.
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(
-          'Bienvenido ${encontrado.nombre} (rol: ${encontrado.rol})',
+    final Usuario usuario = encontrado;
+    if (usuario.rol == 'conductor') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => MisVehiculos(correo: usuario.correo),
         ),
-      ),
-    );
+      );
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Taller(mecanico: usuario)),
+      );
+    }
   }
 
   @override
