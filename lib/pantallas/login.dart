@@ -39,8 +39,7 @@ class _PantallaLoginState extends State<PantallaLogin> {
       return;
     }
 
-    
-final Usuario usuario = encontrado;
+    final Usuario usuario = encontrado;
     if (usuario.rol == 'conductor') {
       Navigator.push(
         context,
@@ -54,6 +53,7 @@ final Usuario usuario = encontrado;
         MaterialPageRoute(builder: (context) => Taller(mecanico: usuario)),
       );
     }
+  }
 
   @override
   void dispose() {
