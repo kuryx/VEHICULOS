@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vehiculos/modelos/vehiculo.dart';
+import 'package:vehiculos/pantallas/mantenimientos.dart';
 
 String formatearFecha(DateTime fecha) {
   final dia = fecha.day.toString().padLeft(2, '0');
@@ -50,7 +51,12 @@ class PanelVehiculo extends StatelessWidget {
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                // TODO: abrir P-05 con Mantenimientos(vehiculo: vehiculo).
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Mantenimientos(vehiculo: vehiculo),
+                  ),
+                );
               },
               child: const Text('Ver mantenimientos'),
             ),
