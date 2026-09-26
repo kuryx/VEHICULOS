@@ -313,7 +313,7 @@ lib/
 | P-03 | `lib/pantallas/panel_vehiculo.dart` | P-02, con `Navigator.push` al tocar un vehículo | El vehículo tocado |
 | P-04 | `lib/pantallas/registrar_vehiculo.dart` | P-02, con `Navigator.push` desde el botón + | Nada |
 | P-05 | `lib/pantallas/mantenimientos.dart` | P-03, con `Navigator.push` desde "Ver mantenimientos" | El vehículo |
-| P-06 | `lib/pantallas/taller.dart` | P-01, con `Navigator.push` al ingresar como mecánico | El correo del usuario |
+| P-06 | `lib/pantallas/taller.dart` | P-01, con `Navigator.push` al ingresar como mecánico | El usuario mecánico (Usuario), por constructor |
 
 **Cómo viaja el dato de la lista al detalle.** El vehículo tocado en P-02 se pasa por el constructor de P-03, como se hizo en la actividad de la semana 5:
 
@@ -337,6 +337,11 @@ onTap: () {
 | 22/08/2026 | Primer commit del proyecto Flutter. | Anderson Sánchez |
 | 29/08/2026 | SRS inicial y mockups del panel, documentación, mantenimiento y mi vehículo. | Anderson Sánchez, David Muñoz |
 | 24/09/2026 | Migración del SRS a este documento con las 14 secciones. Se definen dos roles, seis pantallas y el mapa de navegación. Se saca del alcance el chatbot, la API de fabricantes y los datos de sensores. El SRS pasa a `docs/srs-agosto.md` y los mockups de agosto a `docs/mockup/version-agosto/`. | Anderson Sánchez |
+| 25/09/2026 | Pantallas P-01 y P-04 y mockups p01 y p04. | Juan Pablo Bustos |
+| 25/09/2026 | Pantallas P-05 y P-06. | David Muñoz |
+| 25/09/2026 | Pantallas P-02 y P-03, mockups p02 y p03. | Anderson Sánchez |
+| 25/09/2026 | Navegación: main.dart arranca en P-01 y el login lleva a P-02 o P-06 según el rol. | Juan Pablo Bustos |
+| 26/09/2026 | Navegación de P-02 a P-03 y P-04, y de P-03 a P-05. Cerrar sesión con pop. | Anderson Sánchez |
 
 ## Referencias
 
@@ -355,6 +360,7 @@ onTap: () {
 - Estructura de este documento: Claude organizó en las 14 secciones de la plantilla el contenido del SRS que el equipo escribió en agosto (problema, stakeholders, objetivos, reglas y casos de uso).
 - Primer borrador de las secciones 4 y 6 a 14, a partir de las decisiones que el equipo tomó el 23 y el 24 de septiembre: los dos roles, las seis pantallas, la regla "kilómetros o meses, lo que llegue primero", el caso real del cambio de aceite y el plan de mantenimiento de la Gixxer 250.
 - Reorganización del repositorio a la estructura que pide la actividad, las clases de `lib/modelos/vehiculo.dart` y el esqueleto de las pantallas, con Claude Code, pidiendo explicación de cada parte antes de aceptarla.
+- Navegación de las pantallas P-02 y P-03 con Claude Code, pidiendo la explicación de la pila en cada salto y por qué el vehículo tocado es el que llega al panel.
 
 **Qué aceptamos.** La separación entre documentos, que vencen por fecha, y mantenimientos, que vencen por kilómetros o meses. El rol de mecánico como quien reinicia el contador con el kilometraje real. La estructura de seis pantallas y el mapa de navegación.
 
