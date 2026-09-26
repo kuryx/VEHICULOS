@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vehiculos/modelos/vehiculo.dart';
+import 'package:vehiculos/pantallas/panel_vehiculo.dart';
+import 'package:vehiculos/pantallas/registrar_vehiculo.dart';
 import 'package:vehiculos/widgets/tarjeta_vehiculo.dart';
 
 class MisVehiculos extends StatelessWidget {
@@ -16,7 +18,7 @@ class MisVehiculos extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () {
-              // TODO: volver a P-01 con Navigator.pop.
+              Navigator.pop(context);
             },
             child: const Text('Cerrar sesión'),
           ),
@@ -40,7 +42,12 @@ class MisVehiculos extends StatelessWidget {
                 return TarjetaVehiculo(
                   vehiculo: vehiculo,
                   onTap: () {
-                    // TODO: abrir P-03 con PanelVehiculo(vehiculo: vehiculo).
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PanelVehiculo(vehiculo: vehiculo),
+                      ),
+                    );
                   },
                 );
               },
@@ -50,7 +57,10 @@ class MisVehiculos extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // TODO: abrir P-04 para registrar un vehículo.
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const RegistrarVehiculo()),
+          );
         },
         child: const Icon(Icons.add),
       ),
