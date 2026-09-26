@@ -30,4 +30,14 @@ Cuentas de prueba: conductor@correo.com / 1234 y taller@correo.com / 1234.
 
 ## Capturas
 
-Se agregan cuando la navegación esté completa.
+### Inicio de sesión
+
+![Inicio de sesión](docs/capturas/login.png)
+
+### Mis vehículos
+
+![Mis vehículos](docs/capturas/mis-vehiculos.png)
+
+### Panel del vehículo
+
+![Panel del vehículo](docs/capturas/panel.png)
